@@ -73,3 +73,61 @@ progress.style.width="84%";
 }
 
 });
+
+//=====================================
+// Mobile Menu Scroll Lock
+//=====================================
+
+const navbarCollapse = document.getElementById("navbarContent");
+
+if (navbarCollapse) {
+
+    navbarCollapse.addEventListener("shown.bs.collapse", () => {
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+    navbarCollapse.addEventListener("hidden.bs.collapse", () => {
+
+        document.body.style.overflow = "";
+
+    });
+
+}
+
+//=====================================
+// Auto Close Mobile Menu
+//=====================================
+
+document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        const menu = document.querySelector(".navbar-collapse");
+
+        if (menu.classList.contains("show")) {
+
+            bootstrap.Collapse.getInstance(menu).hide();
+
+        }
+
+    });
+
+});
+
+//=====================================
+// Close Menu on Scroll
+//=====================================
+
+window.addEventListener("scroll", () => {
+
+    const menu = document.querySelector(".navbar-collapse");
+
+    if (menu.classList.contains("show")) {
+
+        bootstrap.Collapse.getInstance(menu).hide();
+
+    }
+
+});
