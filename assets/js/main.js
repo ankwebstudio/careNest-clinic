@@ -119,15 +119,20 @@ document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
 //=====================================
 // Close Menu on Scroll
 //=====================================
+document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
 
-window.addEventListener("scroll", () => {
+    link.addEventListener("click", () => {
 
-    const menu = document.querySelector(".navbar-collapse");
+        const menu = document.querySelector(".navbar-collapse");
 
-    if (menu.classList.contains("show")) {
+        const bsCollapse = bootstrap.Collapse.getInstance(menu);
 
-        bootstrap.Collapse.getInstance(menu).hide();
+        if (bsCollapse) {
 
-    }
+            bsCollapse.hide();
+
+        }
+
+    });
 
 });
