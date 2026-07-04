@@ -272,11 +272,10 @@ p{
 
 .custom-navbar{
 
-    background:rgba(255,255,255,.95);
+    background:rgba(255,255,255,.90);
 
-    backdrop-filter:blur(12px);
-
-    -webkit-backdrop-filter:blur(12px);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
     padding:15px 0;
 
@@ -284,7 +283,7 @@ p{
 
     border-bottom:1px solid rgba(15,118,110,.08);
 
-    z-index:999;
+    z-index:1055;
 
 }
 
@@ -839,54 +838,29 @@ p{
 
 }
 
-@media(max-width:576px){
+@media(max-width:768px){
+
+    #hero{
+
+        padding:130px 0 70px;
+
+        text-align:center;
+
+    }
 
     .hero-content h1{
 
-        font-size:2rem;
+        font-size:2.3rem;
+
+        line-height:1.2;
 
     }
 
-    .hero-buttons{
+    .hero-content p{
 
-        flex-direction:column;
-
-    }
-
-    .hero-buttons .btn{
-
-        width:100%;
+        font-size:1rem;
 
     }
-
-    .hero-card{
-
-        min-width:100%;
-
-    }
-
-}
-@media(max-width:768px){
-
-#hero{
-
-    padding-top:120px;
-    padding-bottom:60px;
-
-}
-
-#hero h1{
-
-    font-size:2.7rem;
-    line-height:1.15;
-
-}
-
-#hero p{
-
-    font-size:1rem;
-
-}
 
 }
 
@@ -1147,16 +1121,26 @@ p{
 }
 /* doctor section mobile-il break*/
 
-@media (max-width: 991px){
+@media(max-width:991px){
 
-    #doctor{
-        padding-top:80px;
-      
+    .doctor-image{
+
+        margin-bottom:40px;
+
     }
 
-    #doctor h3{
-        margin-top:20px;
-        font-size:2rem;
+    .doctor-content{
+
+        padding-left:0;
+
+        text-align:center;
+
+    }
+
+    .doctor-buttons{
+
+        justify-content:center;
+
     }
 
 }
@@ -1167,9 +1151,9 @@ p{
 
     position:absolute;
 
-    bottom:25px;
+    right:20px;
 
-    right:-20px;
+    bottom:20px;
 
     background:var(--white);
 
@@ -3090,9 +3074,9 @@ color:white;
 
 .gallery-card img{
 
-    width:100%;
+ width:100%;
 
-    height:280px;
+    aspect-ratio:4/3;
 
     object-fit:cover;
 
