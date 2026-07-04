@@ -543,6 +543,52 @@ p{
     }
 
 }
+@media (max-width:991px){
+
+    .custom-navbar .container{
+
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        flex-wrap:nowrap;
+
+    }
+
+    .navbar-brand{
+
+        flex:1;
+        margin-right:0;
+        min-width:0;
+    }
+
+    .navbar-brand .ms-3{
+
+        margin-left:0 !important;
+
+    }
+
+    .navbar-brand h4{
+
+        font-size:1.9rem;
+        margin-bottom:2px;
+
+    }
+
+    .navbar-brand small{
+
+        font-size:.9rem;
+
+    }
+
+    .navbar-toggler{
+
+        margin-left:15px;
+        flex-shrink:0;
+        padding:0;
+
+    }
+
+}
 
 /*==================================================
                     HERO SECTION
