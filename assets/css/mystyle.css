@@ -454,53 +454,92 @@ p{
 
 }
 
-/* Mobile Menu */
+/* ==========================================
+            Mobile Navbar
+========================================== */
 
-@media(max-width:991px){
+@media (max-width:991px){
 
     .navbar-collapse{
 
-        margin-top:20px;
+        position: fixed;
 
-        background:#fff;
+        top: 80px;
+        left: 15px;
+        right: 15px;
 
-        border-radius:18px;
+        background: #fff;
 
-        padding:25px;
+        border-radius: 20px;
 
-        box-shadow:0 15px 35px rgba(0,0,0,.08);
+        padding: 25px;
+
+        box-shadow: 0 20px 45px rgba(0,0,0,.12);
+
+        z-index: 1050;
+
+        max-height: calc(100vh - 100px);
+
+        overflow-y: auto;
+
+        margin-top: 0;
 
     }
 
     .navbar-nav{
 
-        gap:5px;
+        gap: 0;
 
-        margin-bottom:20px;
+        margin-bottom: 25px;
+
+    }
+
+    .navbar-nav .nav-item{
+
+        width: 100%;
 
     }
 
     .navbar-nav .nav-link{
 
-        padding:12px 0 !important;
+        display: block;
+
+        padding: 15px 5px !important;
+
+        border-bottom: 1px solid #e9ecef;
+
+        font-weight: 600;
+
+    }
+
+    .navbar-nav .nav-item:last-child .nav-link{
+
+        border-bottom: none;
 
     }
 
     .custom-navbar .d-flex{
 
-        flex-direction:column;
+        flex-direction: column;
 
-        width:100%;
+        gap: 12px;
+
+        width: 100%;
 
     }
 
     .custom-navbar .btn{
 
-        width:100%;
+        width: 100%;
+
+        justify-content: center;
+
+        border-radius: 50px;
 
     }
 
 }
+
 /*==================================================
                     HERO SECTION
 ==================================================*/
@@ -745,7 +784,7 @@ p{
 
     #hero{
 
-        padding:150px 0 90px;
+         padding-top:140px;
 
         text-align:center;
 
@@ -820,6 +859,29 @@ p{
         min-width:100%;
 
     }
+
+}
+@media(max-width:768px){
+
+#hero{
+
+    padding-top:120px;
+    padding-bottom:60px;
+
+}
+
+#hero h1{
+
+    font-size:2.7rem;
+    line-height:1.15;
+
+}
+
+#hero p{
+
+    font-size:1rem;
+
+}
 
 }
 
@@ -1076,6 +1138,21 @@ p{
     border-radius:25px;
 
     box-shadow:0 20px 40px rgba(0,0,0,.10);
+
+}
+/* doctor section mobile-il break*/
+
+@media (max-width: 991px){
+
+    #doctor{
+        padding-top:80px;
+      
+    }
+
+    #doctor h3{
+        margin-top:20px;
+        font-size:2rem;
+    }
 
 }
 
